@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,14 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Hacker theme custom colors
+				hacker: {
+					dark: '#1A1F2C',
+					gray: '#222222',
+					lightgray: '#333333',
+					green: '#00FF41',
+					brightgreen: '#39FF14',
 				}
 			},
 			borderRadius: {
@@ -84,11 +93,25 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'terminal-blink': {
+					'0%, 100%': { opacity: '1' },
+					'50%': { opacity: '0' }
+				},
+				'glow': {
+					'0%, 100%': { 
+						textShadow: '0 0 5px rgba(57, 255, 20, 0.5), 0 0 10px rgba(57, 255, 20, 0.3)'
+					},
+					'50%': { 
+						textShadow: '0 0 15px rgba(57, 255, 20, 0.8), 0 0 20px rgba(57, 255, 20, 0.5)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'terminal-blink': 'terminal-blink 1s step-end infinite',
+				'glow': 'glow 2s ease-in-out infinite'
 			}
 		}
 	},
