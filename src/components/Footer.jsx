@@ -1,5 +1,5 @@
 
-import { Github, Twitter, Linkedin, Heart,FileJson } from 'lucide-react';
+import { Github, Twitter, Linkedin, Heart,FileJson,Coffee } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -44,7 +44,7 @@ const Footer = () => {
         
         <div className="mt-6 pt-6 border-t border-hacker-green/10 text-center text-gray-500 text-sm">
           <p>
-            Built with <Heart size={14} className="inline-block text-hacker-green mb-1" /> using React & JavaScript
+          Built with React, Tailwind, and way too much coffee <Coffee size={14} className="inline-block text-hacker-green mb-1" />
           </p>
         </div>
       </div>
