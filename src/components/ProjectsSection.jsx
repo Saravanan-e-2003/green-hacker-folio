@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { cn } from '@/lib/utils';
 import { ExternalLink, Github, Code } from 'lucide-react';
+// import boardify from 'green-hacker-folio/public/Boardify.png'
 
 const projects = [
   {
@@ -11,7 +12,8 @@ const projects = [
     tags: ["React", "Firebase", "Gen-AI"],
     githubLink: "https://github.com/Saravanan-e-2003/Boardify",
     githubreponame:"Boardify",
-    liveLink: "https://boardify-ebon.vercel.app/"
+    liveLink: "https://boardify-ebon.vercel.app/",
+    imagelinks:"/images/Boardify.png"
   },
   {
     id: 2,
@@ -19,15 +21,17 @@ const projects = [
     description:"Developed a gesture-based control system using MediaPipe that enables users to interact with their PC, through real-time hand movements.",
     tags: ["Pyhton", "Mediapipe", "tensorflow"],
     githubLink: "https://github.com/Saravanan-e-2003/waveControl_handGesture_input_controls",
-    githubreponame:"waveControl_handGesture"
+    githubreponame:"waveControl_handGesture",
+    imagelinks:"/images/waveControl.png"
   },
   {
     id: 3,
     title: "Game Prototypes",
     description: "Designed and published multiple interactive game prototypes on itch.io showcasing core gameplay mechanics and rapid prototyping skills using Unity and C#.",
-    tags: ["React", "Node.js", "MongoDB", "Stripe"],
+    tags: ["Unity", "C#", "itch.io", "Firebase"],
     liveLink: "https://noah03.itch.io/",
-    liveLinkName:"noah03.itch.io"
+    liveLinkName:"noah03.itch.io",
+    imagelinks:"/images/itch.png"
   }
 ];
 
@@ -54,8 +58,20 @@ const ProjectsSection = () => {
               onMouseEnter={() => setHoveredProject(project.id)}
               onMouseLeave={() => setHoveredProject(null)}
             >
-              <div className="h-48 bg-hacker-lightgray flex items-center justify-center">
-                <div className="text-6xl text-hacker-green/30">&lt;/&gt;</div>
+              <div className="h-40 bg-hacker-lightgray flex items-center justify-center cursor-pointer"
+               onClick={
+                () =>{
+                  const targetLink = project.liveLink || project.githubLink ;
+                  if(targetLink){
+                    window.location.href = targetLink;
+                  }
+                }
+               }>
+              <img
+                src={`${project.imagelinks}`}
+                alt="Project Preview"
+                className="h-full w-full"
+              />
               </div>
               
               <div className="p-6">

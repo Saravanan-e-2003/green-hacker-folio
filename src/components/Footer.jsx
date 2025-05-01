@@ -1,5 +1,5 @@
 
-import { Github, Twitter, Linkedin, Heart } from 'lucide-react';
+import { Github, Twitter, Linkedin, Heart,FileJson } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -19,21 +19,21 @@ const Footer = () => {
           
           <div className="flex space-x-4">
             <a
-              href="#"
+              href="https://github.com/Saravanan-e-2003"
               className="text-hacker-green hover:text-hacker-brightgreen transition-colors"
               aria-label="GitHub"
             >
               <Github size={20} />
             </a>
             <a
-              href="#"
+              href="https://leetcode.com/u/Saravanan0503/"
               className="text-hacker-green hover:text-hacker-brightgreen transition-colors"
-              aria-label="Twitter"
+              aria-label="LeetCode"
             >
-              <Twitter size={20} />
+              <FileJson size={20} />
             </a>
             <a
-              href="#"
+              href="https://www.linkedin.com/in/saravanan-e-/"
               className="text-hacker-green hover:text-hacker-brightgreen transition-colors"
               aria-label="LinkedIn"
             >
