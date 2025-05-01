@@ -6,15 +6,15 @@ import { ExternalLink, Github, Code } from 'lucide-react';
 const projects = [
   {
     id: 1,
-    title: "Secure Authentication System",
+    title: "Boardify",
     description: "Developed a robust authentication system with multi-factor authentication and encryption using JWT.",
-    tags: ["React", "Node.js", "JWT", "Cybersecurity"],
+    tags: ["React", "Firebase", "Gen-AI"],
     githubLink: "#",
     liveLink: "#"
   },
   {
     id: 2,
-    title: "Data Visualization Dashboard",
+    title: "Gesture Control System",
     description: "Interactive dashboard to visualize complex data sets with customizable filters and real-time updates.",
     tags: ["D3.js", "TypeScript", "Firebase", "Redux"],
     githubLink: "#",

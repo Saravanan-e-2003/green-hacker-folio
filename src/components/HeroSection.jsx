@@ -35,7 +35,7 @@ const HeroSection = () => {
             {showBio && (
               <div className="text-gray-200 pl-0 md:pl-0 space-y-4 leading-relaxed">
                 <TypewriterEffect 
-                  text="I'm a full-stack developer specializing in creating secure, scalable web applications with a focus on both functionality and aesthetics."
+                  text="I'm a web developer specializing in creating secure, scalable web applications with a focus on both functionality and aesthetics."
                   delay={20}
                   onComplete={() => setShowFinalText(true)}
                 />
@@ -46,8 +46,8 @@ const HeroSection = () => {
                       <span className="text-hacker-green">root@portfolio</span>:~$ <TypewriterEffect text="get_skills" delay={80} />
                     </p>
                     
-                    <div className="grid grid-cols-2 md:grid-cols-3 gap-2 pl-0 md:pl-6 font-mono text-sm">
-                      {['React', 'TypeScript', 'Node.js', 'Python', 'Go', 'AWS', 'Docker', 'GraphQL', 'Cybersecurity'].map((skill, index) => (
+                    <div className="grid grid-cols-2 md:grid-cols-3 gap-2 pl-0 md:pl-0 font-mono text-sm">
+                      {['Java','React', 'Node.js', 'PL/SQL','SAP ABAP','Unity'].map((skill, index) => (
                         <div key={index} className={cn(
                           "bg-hacker-lightgray/40 border border-hacker-green/20 rounded px-3 py-1 text-center",
                           "text-hacker-green hover:text-hacker-brightgreen hover:border-hacker-green transition-colors"
