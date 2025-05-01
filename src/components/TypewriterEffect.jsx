@@ -22,6 +22,11 @@ const TypewriterEffect = ({ text, delay = 50, className = '', onComplete }) => {
     if (currentIndex < text.length) {
       const timeout = setTimeout(typeNextCharacter, delay);
       return () => clearTimeout(timeout);
+    }else if(!isComplete){
+      setIsComplete(true);
+      if (onComplete) {
+        onComplete();
+      }
     }
   }, [currentIndex, text, delay, typeNextCharacter]);
 

@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0 text-center md:text-left">
             <div className="text-hacker-green font-mono text-lg font-bold mb-2">
-              <span className="text-hacker-brightgreen">~</span>/dev_portfolio
+              <span className="text-hacker-brightgreen">~</span>/saravanan_portfolio
             </div>
             <p className="text-gray-400 text-sm">
               &copy; {currentYear} All rights reserved

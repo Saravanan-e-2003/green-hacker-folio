@@ -4,8 +4,8 @@ import TypewriterEffect from './TypewriterEffect';
 import { cn } from '@/lib/utils';
 
 const HeroSection = () => {
-  const [showCommand, setShowCommand] = useState(false);
-  const [showBio, setShowBio] = useState(false);
+  const [showCommand, setShowCommand] = useState(true);
+  const [showBio, setShowBio] = useState(true);
   const [showFinalText, setShowFinalText] = useState(false);
 
   useEffect(() => {
@@ -33,7 +33,7 @@ const HeroSection = () => {
             </p>
             
             {showBio && (
-              <div className="text-gray-200 pl-0 md:pl-6 space-y-4 leading-relaxed">
+              <div className="text-gray-200 pl-0 md:pl-0 space-y-4 leading-relaxed">
                 <TypewriterEffect 
                   text="I'm a full-stack developer specializing in creating secure, scalable web applications with a focus on both functionality and aesthetics."
                   delay={20}

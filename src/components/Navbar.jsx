@@ -28,13 +28,13 @@ const Navbar = ({ activeSection, onSectionChange }) => {
   return (
     <nav
       className={cn(
-        "fixed top-8 left-0 right-0 z-50 mx-auto max-w-7xl px-6 transition-all duration-300",
+        "fixed top-8 left-0 right-0 z-50 mx-auto max-w-5xl px-10 transition-all duration-300",
         isScrolled ? "top-2" : "top-8"
       )}
     >
       <div className="relative flex items-center justify-between rounded-full bg-hacker-gray/90 backdrop-blur-sm px-4 py-3 border border-hacker-green/30">
         <div className="text-hacker-green font-mono text-lg font-bold animate-glow">
-          <span>~/dev_portfolio$</span>
+          <span>~/saravanan_portfolio$</span>
           <span className="cursor"></span>
         </div>
 
