@@ -7,26 +7,27 @@ const projects = [
   {
     id: 1,
     title: "Boardify",
-    description: "Developed a robust authentication system with multi-factor authentication and encryption using JWT.",
+    description: "Developed a simple task management system for organizing and tracking tasks. Utilized the Kanban Board method to enhance workflow visualization.",
     tags: ["React", "Firebase", "Gen-AI"],
-    githubLink: "#",
-    liveLink: "#"
+    githubLink: "https://github.com/Saravanan-e-2003/Boardify",
+    githubreponame:"Boardify",
+    liveLink: "https://boardify-ebon.vercel.app/"
   },
   {
     id: 2,
-    title: "Gesture Control System",
-    description: "Interactive dashboard to visualize complex data sets with customizable filters and real-time updates.",
-    tags: ["D3.js", "TypeScript", "Firebase", "Redux"],
-    githubLink: "#",
-    liveLink: "#"
+    title: "WaveControl",
+    description:"Developed a gesture-based control system using MediaPipe that enables users to interact with their PC, through real-time hand movements.",
+    tags: ["Pyhton", "Mediapipe", "tensorflow"],
+    githubLink: "https://github.com/Saravanan-e-2003/waveControl_handGesture_input_controls",
+    githubreponame:"waveControl_handGesture"
   },
   {
     id: 3,
-    title: "E-commerce Platform",
-    description: "Scalable e-commerce solution with payment processing, inventory management, and analytics.",
+    title: "Game Prototypes",
+    description: "Designed and published multiple interactive game prototypes on itch.io showcasing core gameplay mechanics and rapid prototyping skills using Unity and C#.",
     tags: ["React", "Node.js", "MongoDB", "Stripe"],
-    githubLink: "#",
-    liveLink: "#"
+    liveLink: "https://noah03.itch.io/",
+    liveLinkName:"noah03.itch.io"
   }
 ];
 
@@ -58,7 +59,13 @@ const ProjectsSection = () => {
               </div>
               
               <div className="p-6">
-                <h3 className="text-xl font-mono font-semibold text-hacker-green mb-2">{project.title}</h3>
+                <h3 className="text-xl font-mono font-semibold text-hacker-green mb-2 cursor-pointer" 
+                onClick={() =>{
+                  const targetLink = project.githubLink || project.liveLink;
+                  if(targetLink){
+                    window.location.href = targetLink;
+                  }
+                }}> {project.title} </h3>
                 <p className="text-gray-400 text-sm mb-4">{project.description}</p>
                 
                 <div className="flex flex-wrap gap-2 mb-4">
@@ -72,7 +79,10 @@ const ProjectsSection = () => {
                   ))}
                 </div>
                 
-                <div className="flex justify-between">
+                <div className="flex justify-between items-center">
+ 
+                {(project.githubLink || project.githubreponame) && (
+                  <div className="flex items-center space-x-2">
                   {project.githubLink && (
                     <a 
                       href={project.githubLink} 
@@ -82,28 +92,56 @@ const ProjectsSection = () => {
                     >
                       <Github size={18} />
                     </a>
-                  )}
-                  
-                  {project.liveLink && (
-                    <a 
-                      href={project.liveLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-hacker-green hover:text-hacker-brightgreen transition-colors"
-                    >
-                      <ExternalLink size={18} />
-                    </a>
-                  )}
-                </div>
+                )}
+
+                {project.githubreponame && (
+                <a 
+                  href={project.githubLink} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-hacker-green hover:text-hacker-brightgreen transition-colors"
+                >
+                  {project.githubreponame}
+                </a>
+            )}
+            </div>
+              )}
+
+       {/* Live link icon spaced separately */}
+  {(project.liveLink || project.liveLinkName) && (
+    <div className="flex items-center space-x-2">
+    <a 
+      href={project.liveLink}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-hacker-green hover:text-hacker-brightgreen transition-colors ml-4"
+    >
+      <ExternalLink size={18} />
+    </a>
+    {project.liveLinkName&& (
+                <a 
+                  href={project.liveLinkName} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-hacker-green hover:text-hacker-brightgreen transition-colors"
+                >
+                  {project.liveLinkName}
+                </a>
+    )}
+    </div>
+  )}
+
+
+</div>
               </div>
               
               {/* Project overlay effect */}
-              <div 
+              {/* <div 
                 className={cn(
-                  "absolute inset-0 bg-gradient-to-b from-transparent to-hacker-dark/90 opacity-0 transition-opacity",
-                  hoveredProject === project.id && "opacity-100"
+                  "absolute inset-0 bg-gradient-to-b from-transparent to-hacker-dark/90 opacity-100 transition-opacity",
+                  hoveredProject === project.id && "opacity-40"
                 )}
-              />
+              /> */}
             </div>
           ))}
         </div>
